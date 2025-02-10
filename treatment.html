@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link rel="stylesheet" href="treatment.css" />
+   <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#">Pet Place</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#store">Store</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <button class="sidebar-btn" onclick="toggleSidebar()">☰</button>
+        </ul>
+      </nav>
+            
+    <div class="sidebar" id="sidebar">
+        <ul>
+           <li onclick="showBlog(0)">Home</li>
+            <li onclick="showBlog(1)">Managing Skin Allergies in Dogs</li>
+            <li onclick="showBlog(2)">Effective Treatment for Canine Ear Infections</li>
+            <li onclick="showBlog(3)">Blog 3</li>
+        </ul>
+    </div>
+
+    <div class="content" id="content">
+        <div class="blog" id="blog0">
+          <header id="home">
+            <div class="section__container header__container">
+              <div class="header__content">
+                <h1>Pet<br /><span> Treatment</span></h1>
+                <h2>We love pets like you do </h2>
+                <p>
+                  From routine check-ups to specialized treatments, we're here to
+                  ensure your pets lead happy, healthy lives.
+                </p>
+                <div class="search-container">
+                  <input type="text" class="search-input" id="search" placeholder="Search blog..." onkeyup="searchBlog()">
+                  <div id="no-results" class="no-results">No matching blog found.</div>
+                </div>
+              </div>
+              <div class="header__image">
+                <img
+                  src="assets/header-bg.png"
+                  alt="header-bg"
+                  class="header__image-bg"
+                />
+                <img src="assets/treatment.png" alt="header" />
+              </div>
+            </div>
+          </header>
+        </div>
+        <!-- First blog -->
+        <div class="blog hidden" id="blog1">
+          <header>
+            <div class="container container-flex">
+                <div class="site-title">
+                    <h1>Managing Skin Allergies in Dogs</h1>
+                </div>
+            </div>
+          </header> 
+        <div class="container container-flex">
+            <main role="main">
+                <article class="article-featured">
+                    <h4 class="article-title">Introduction</h4>
+                    <img src="assets/skin allergy .jpeg" class="article-image">
+                    <p class="article-body">Just like humans, dogs can suffer from skin allergies, leading to itching, redness, and discomfort. Skin allergies can be triggered by food, environmental factors, or parasites.
+                      <br><strong>Causes of Skin Allergies</strong><br>
+                      <ol>
+                     <li> Food Allergies – Proteins like chicken, beef, or dairy can trigger reactions.</li>
+                    <li> Flea Allergy Dermatitis (FAD) – Some dogs are allergic to flea saliva.</li>
+                    <li>Environmental Allergies – Pollen, mold, dust mites, or grass can cause seasonal reactions.</li></ol><br><br>
+                   <strong> Treatment & Management</strong><br>
+                  ✔ Antihistamines: Medications like Benadryl (vet-approved) can reduce itching.<br>
+                  ✔ Medicated Shampoos: Oatmeal or hypoallergenic shampoos soothe irritated skin.<br>
+                  ✔ Dietary Changes: Switching to a hypoallergenic or grain-free diet may help.<br>
+                  ✔ Flea Prevention: Monthly flea treatments like NexGard or Bravecto prevent flea allergies.<br>
+
+                  💡 Tip: If your dog’s itching persists, visit a veterinarian for allergy testing and possible immunotherapy.
+                    </p>
+                </article>
+        </div>
+        <footer>
+            <p><strong>Living the Simple Life</strong></p>
+            <p>Copyright 2019</p>
+        </footer>
+
+        </div>
+        <!-- second  -->
+        <div class="blog hidden" id="blog2">
+              <header>
+                <div class="container container-flex">
+                    <div class="site-title">
+                        <h1>Effective Treatment for Canine Ear Infections</h1>
+                    </div>
+                </div>
+              </header> 
+            <div class="container container-flex">
+                <main role="main">
+                    <article class="article-featured">
+                        <img src="assets/ear infection .jpeg" class="article-image">
+                        <h4 class="article-title">Introduction</h4>
+                        <p class="article-body">Ear infections are one of the most common reasons dog owners visit the vet. Dogs with floppy ears, like Cocker Spaniels and Golden Retrievers, are more prone to them
+                          <br><strong>Symptoms of Ear Infections</strong><br>
+                          🐕 Constant ear scratching or head shaking<br>
+                          🐕 Red, swollen ears with a bad odor<br>
+                          🐕 Yellow or dark brown discharge<br><br>
+                          <strong> Causes</strong><br>
+                          ✔ Bacterial or yeast overgrowth due to trapped moisture<br>
+                          ✔ Allergies that cause inflammation in the ear canal<br>
+                          ✔ Ear mites (common in puppies)<br>
+                       <strong> Treatment & Management</strong><br>
+                       ✔ Vet-Prescribed Ear Drops: Contain antibiotics or antifungals to clear the infection.<br>
+                       ✔ Regular Ear Cleaning: Use a vet-approved ear cleaner weekly.<br>
+                       ✔ Dry Ears After Baths: Moisture buildup leads to infections.<br>
+                       ✔ Allergy Management: If allergies cause infections, consult a vet for treatment options.<br>
+                       
+                       💡 Tip: Never use cotton swabs inside the ear canal, as they can push debris further in.<br>
+                        </p>
+                    </article>
+            </div>
+            <footer>
+                <p><strong>Living the Simple Life</strong></p>
+                <p>Copyright 2019</p>
+            </footer>
+        </div>
+        <!-- third -->
+        <div class="blog hidden" id="blog3">
+          <header>
+            <div class="container container-flex">
+                <div class="site-title">
+                    <h1> How to Treat and Prevent Canine Arthritis</h1>
+                </div>
+            </div>
+          </header> 
+        <div class="container container-flex">
+            <main role="main">
+                <article class="article-featured">
+                    <img src="assets/oldage.jpeg" class="article-image">
+                    <h4 class="article-title">Introduction</h4>
+                    <p class="article-body">As dogs age, arthritis becomes a major concern, causing joint pain and reduced mobility. Larger breeds like Labrador Retrievers and German Shepherds are more at risk.
+                      <br><strong>Symptoms of Ear Infections</strong><br>
+                      🐾 Difficulty standing up or climbing stairs<br>
+                      🐾 Stiffness after resting<br>
+                      🐾 Limping or avoiding playtime<br>
+                      <strong> Causes</strong><br>
+                      ✔ Bacterial or yeast overgrowth due to trapped moisture<br>
+                      ✔ Allergies that cause inflammation in the ear canal<br>
+                      ✔ Ear mites (common in puppies)<br>
+                   <strong> Treatment & Management</strong><br>
+                   ✔ Joint Supplements: Glucosamine and chondroitin support joint health.<br>
+                   ✔ Pain Relievers: NSAIDs like Carprofen (Rimadyl) help manage discomfort.<br>
+                   ✔ Weight Management: Extra weight worsens joint pain, so keep your dog fit.
+                   ✔ Low-Impact Exercise: Swimming and short walks keep joints flexible.<br>
+                   ✔ Orthopedic Beds: Provide extra cushioning for aging joints.<br>
+
+                  💡 Tip: Regular vet checkups help track arthritis progression and adjust treatment accordingly.<br>
+                    </p>
+                </article>
+        </div>
+        <footer>
+            <p><strong>Living the Simple Life</strong></p>
+            <p>Copyright 2019</p>
+        </footer>
+    </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            let sidebar = document.getElementById('sidebar');
+            let content = document.getElementById('content');
+            sidebar.classList.toggle('active');
+            content.classList.toggle('shifted');
+        }
+        
+        function showBlog(index) {
+            let blogs = document.querySelectorAll('.blog');
+            blogs.forEach(blog => blog.classList.add('hidden'));
+            document.getElementById('blog' + index).classList.remove('hidden');
+        }
+        
+        function searchBlog() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let blogs = document.querySelectorAll('.blog');
+            let found = false;
+            
+            blogs.forEach((blog, index) => {
+                let title = blog.querySelector('h2').textContent.toLowerCase();
+                if (title.includes(input) && index !== 0) {
+                    blogs.forEach(b => b.classList.add('hidden'));
+                    blog.classList.remove('hidden');
+                    found = true;
+                }
+            });
+            
+            document.getElementById('no-results').style.display = found ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link rel="stylesheet" href="treatment.css" />
+   <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#">Pet Place</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#store">Store</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <button class="sidebar-btn" onclick="toggleSidebar()">☰</button>
+        </ul>
+      </nav>
+            
+    <div class="sidebar" id="sidebar">
+        <ul>
+           <li onclick="showBlog(0)">Home</li>
+            <li onclick="showBlog(1)">The Story of Sheru</li>
+            <li onclick="showBlog(2)">The Miracle of Chintu</li>
+            <li onclick="showBlog(3)">Blog 3</li>
+        </ul>
+    </div>
+
+    <div class="content" id="content">
+        <div class="blog" id="blog0">
+          <header id="home">
+            <div class="section__container header__container">
+              <div class="header__content">
+                <h1>Adopt<br /><span> Don't Shop</span></h1>
+                <h2>We love pets like you do </h2>
+                <p>
+                    Every stray deserves a story with a happy ending—adopt, don’t shop!
+                </p>
+                <div class="search-container">
+                  <input type="text" class="search-input" id="search" placeholder="Search blog..." onkeyup="searchBlog()">
+                  <div id="no-results" class="no-results">No matching blog found.</div>
+                </div>
+              </div>
+              <div class="header__image">
+                <img
+                  src="assets/header-bg.png"
+                  alt="header-bg"
+                  class="header__image-bg"
+                />
+                <img src="assets/indianDog.png" alt="header" />
+              </div>
+            </div>
+          </header>
+        </div>
+        <!-- First blog -->
+        <div class="blog hidden" id="blog1">
+          <header>
+            <div class="container container-flex">
+                <div class="site-title">
+                    <h1>From the Streets of Delhi to a Loving Home: The Story of Sheru</h1>
+                </div>
+            </div>
+          </header> 
+        <div class="container container-flex">
+            <main role="main">
+                <article class="article-featured">
+                    <img src="assets/cutie.jpeg" class="article-image">
+                    <p class="article-body">In the bustling streets of Old Delhi, where the aroma of street food fills the air and the honking of rickshaws never stops, lived a stray dog named Sheru. He was a pariah dog, the most common breed found on Indian streets. Sheru had spent years surviving on leftovers from dhabas and kindness from a few shopkeepers who gave him food. But life on the streets was harsh—he had scars from fights, suffered from infections, and was often shooed away by people.<br>
+
+                        One day, Pooja, a college student who often fed street dogs in her area, noticed Sheru limping. She took him to a nearby NGO-run veterinary clinic where he was diagnosed with a severe wound infection. Knowing that returning him to the streets would be dangerous, Pooja made a life-changing decision—she decided to adopt him.<br>
+                        
+                        Sheru, once a lonely street dog, was now a part of a warm, loving home. Initially, he was scared of human touch, but with time and patience, he learned to trust again. Today, Sheru enjoys long walks at Lodhi Garden, plays with Pooja’s younger brother, and sleeps on a cozy bed—something he had never experienced before.<br>
+                        
+                        Sheru’s story is a reminder that Indian street dogs are just as loving and loyal as any pedigree breed. All they need is a chance.<br>
+                    </p>
+                </article>
+        </div>
+        <footer>
+            <p><strong>Living the Simple Life</strong></p>
+            <p>Copyright 2019</p>
+        </footer>
+
+        </div>
+        <!-- second  -->
+        <div class="blog hidden" id="blog2">
+              <header>
+                <div class="container container-flex">
+                    <div class="site-title">
+                        <h1>The Miracle of Chintu: A Stray Kitten’s Fight for Survival in Mumbai</h1>
+                    </div>
+                </div>
+              </header> 
+            <div class="container container-flex">
+                <main role="main">
+                    <article class="article-featured">
+                        <img src="assets/rescue2.jpeg" class="article-image">
+                        <h4 class="article-title">Introduction</h4>
+                        <p class="article-body">During a heavy monsoon downpour in Mumbai, Meera, a working professional, was rushing home when she heard faint cries coming from a roadside drain. Curious and concerned, she followed the sound and found a tiny, drenched kitten stuck in a flooded pothole. The little one was shivering, weak, and barely holding on.<br>
+
+                            Meera carefully picked up the kitten, wrapped him in her dupatta, and rushed home. She wasn’t sure if he would survive the night, but she fed him warm milk and kept him close. The next day, she took him to a local animal shelter in Bandra, where he was checked for infections and dehydration.<br>
+                            
+                            Naming him Chintu, Meera decided to foster him until he was strong enough to be adopted. But as weeks passed, Chintu became a permanent part of her life. From a weak, fragile kitten, he grew into a playful and mischievous cat who loved to chase Meera’s saree tassels and sit by the window watching Mumbai’s bustling life.<br>
+                            
+                            Chintu’s rescue and survival is a testimony to the kindness of people who refuse to ignore an animal in distress. In a city where thousands of strays struggle to survive, a small act of compassion can change a life forever.<br>
+                        </p>
+                    </article>
+            </div>
+            <footer>
+                <p><strong>Living the Simple Life</strong></p>
+                <p>Copyright 2019</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            let sidebar = document.getElementById('sidebar');
+            let content = document.getElementById('content');
+            sidebar.classList.toggle('active');
+            content.classList.toggle('shifted');
+        }
+        
+        function showBlog(index) {
+            let blogs = document.querySelectorAll('.blog');
+            blogs.forEach(blog => blog.classList.add('hidden'));
+            document.getElementById('blog' + index).classList.remove('hidden');
+        }
+        
+        function searchBlog() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let blogs = document.querySelectorAll('.blog');
+            let found = false;
+            
+            blogs.forEach((blog, index) => {
+                let title = blog.querySelector('h2').textContent.toLowerCase();
+                if (title.includes(input) && index !== 0) {
+                    blogs.forEach(b => b.classList.add('hidden'));
+                    blog.classList.remove('hidden');
+                    found = true;
+                }
+            });
+            
+            document.getElementById('no-results').style.display = found ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

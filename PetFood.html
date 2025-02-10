@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link rel="stylesheet" href="treatment.css" />
+   <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#">Pet Place</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#store">Store</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <button class="sidebar-btn" onclick="toggleSidebar()">☰</button>
+        </ul>
+      </nav>
+            
+    <div class="sidebar" id="sidebar">
+        <ul>
+           <li onclick="showBlog(0)">Home</li>
+            <li onclick="showBlog(1)">The Ultimate Guide to a Balanced Diet for Dogs & Cats</li>
+            <li onclick="showBlog(2)">10 Human Foods That Are Safe (and Unsafe) for Your Pet</li>
+            <li onclick="showBlog(3)">Homemade vs. Commercial Pet Food</li>
+        </ul>
+    </div>
+
+    <div class="content" id="content">
+        <div class="blog" id="blog0">
+          <header id="home">
+            <div class="section__container header__container">
+              <div class="header__content">
+                <h1>Pet<br /><span> Nutrition</span></h1>
+                <h2>We love pets like you do </h2>
+                <p>
+                    Fuel your pet’s life with the right bite! Smart nutrition for a happier, healthier fur buddy
+                </p>
+                <div class="search-container">
+                  <input type="text" class="search-input" id="search" placeholder="Search blog..." onkeyup="searchBlog()">
+                  <div id="no-results" class="no-results">No matching blog found.</div>
+                </div>
+              </div>
+              <div class="header__image">
+                <img src="assets/catWithFood.png" alt="header" />
+              </div>
+            </div>
+          </header>
+        </div>
+        <!-- First blog -->
+        <div class="blog hidden" id="blog1">
+          <header>
+            <div class="container container-flex">
+                <div class="site-title">
+                    <h1>The Ultimate Guide to a Balanced Diet for Dogs & Cats</h1>
+                </div>
+            </div>
+          </header> 
+        <div class="container container-flex">
+            <main role="main">
+                <article class="article-featured">
+                    <h4 class="article-title">Introduction</h4>
+                    <img src="assets/food1.jpeg" class="article-image">
+                    <p class="article-body">Just like humans, pets need a well-balanced diet to stay healthy and active. Many pet owners unknowingly feed their pets unhealthy food, leading to obesity, allergies, or nutritional deficiencies. This guide will help you understand what makes a perfect diet for your furry friend.
+                      <br><strong>1. Key Nutrients Every Pet Needs</strong><br>
+                      🐶 Protein: Essential for muscle growth and overall health. Sources: Chicken, fish, eggs, and turkey.<br>
+
+                        🐱 Fats: Provide energy and keep the skin and coat healthy. Sources: Fish oil, coconut oil, and animal fats.<br>
+
+                        🥦 Carbohydrates: Fuel for energy but should be given in moderation. Sources: Rice, sweet potatoes, and oats.<br>
+
+                        🦴 Vitamins & Minerals: Essential for bone strength, immunity, and digestion. Sources: Leafy greens, pumpkin, and fish.<br>
+                    <strong>2. Homemade vs. Store-Bought Food</strong><br>
+                    ✅ Homemade Meals: Allows full control over ingredients, but requires careful balance.<br>
+                    ❌ Commercial Pet Food: Convenient but may contain preservatives and fillers. Always choose high-quality brands.<br>
+                    
+                   <strong> 3. Common Diet Mistakes to Avoid</strong>
+                    ⚠️ Overfeeding can lead to obesity. Follow portion guidelines.<br>
+                    ⚠️ Avoid excessive treats, as they are often calorie-dense.<br>
+                    ⚠️ Keep a consistent meal schedule to avoid digestion problems.<br>
+                    </p>
+                </article>
+        </div>
+        <footer>
+            <p><strong>Living the Simple Life</strong></p>
+            <p>Copyright 2019</p>
+        </footer>
+
+        </div>
+        <!-- second  -->
+        <div class="blog hidden" id="blog2">
+              <header>
+                <div class="container container-flex">
+                    <div class="site-title">
+                        <h1>10 Human Foods That Are Safe (and Unsafe) for Your Pet</h1>
+                    </div>
+                </div>
+              </header> 
+            <div class="container container-flex">
+                <main role="main">
+                    <article class="article-featured">
+                        <img src="assets/food2.jpeg" class="article-image">
+                        <h4 class="article-title">Introduction</h4>
+                        <p class="article-body">We love sharing our food with our pets, but not everything we eat is safe for them. Some foods can be toxic and even fatal. Here’s a list of 10 safe foods and 10 dangerous foods you should know!
+                          <br><strong>Safe Foods for Pets</strong><br>
+                          1️⃣ Carrots – Great for dental health and rich in Vitamin A.<br>
+                          2️⃣ Apples (without seeds) – A good source of fiber and vitamins.<br>
+                          3️⃣ Rice – Easily digestible and perfect for upset stomachs.<br>
+                          4️⃣ Pumpkin – Helps with digestion and relieves constipation.<br>
+                          5️⃣ Chicken (cooked, unseasoned) – High in protein and easy to digest.<br>
+                          6️⃣ Oatmeal – A great fiber source, especially for older pets.<br>
+                          7️⃣ Fish (salmon, tuna) – Provides Omega-3 for a shiny coat.<br>
+                          8️⃣ Blueberries – Packed with antioxidants for brain health.<br>
+                          9️⃣ Eggs (cooked) – A protein-rich treat.<br>
+                          🔟 Peanut Butter (unsalted, xylitol-free) – A tasty source of protein and healthy fats.<br>
+                          <strong>❌ Unsafe Foods for Pets</strong><br>
+                          1️⃣ Chocolate – Contains theobromine, which is toxic to dogs and cats.<br>
+                          2️⃣ Grapes & Raisins – Can cause kidney failure.<br>
+                          3️⃣ Onions & Garlic – Damage red blood cells and can cause anemia.<br>
+                          4️⃣ Avocado – Contains persin, which can be harmful to pets.<br>
+                          5️⃣ Alcohol – Even small amounts can be fatal.<br>
+                          6️⃣ Caffeine (coffee, tea, energy drinks) – Can cause rapid heart rate and seizures.<br>
+                          7️⃣ Xylitol (artificial sweetener) – Found in sugar-free gum and peanut butter, highly toxic.<br>
+                          8️⃣ Macadamia Nuts – Can cause weakness, vomiting, and tremors.<br>
+                          9️⃣ Raw Dough (yeast-based) – Expands in the stomach, leading to bloating and pain.<br>
+                          🔟 Bones (cooked) – Can splinter and cause internal injuries.<br>
+                        </p>
+                    </article>
+            </div>
+            <footer>
+                <p><strong>Living the Simple Life</strong></p>
+                <p>Copyright 2019</p>
+            </footer>
+        </div>
+        <!-- third -->
+        <div class="blog hidden" id="blog3">
+          <header>
+            <div class="container container-flex">
+                <div class="site-title">
+                    <h1> Homemade vs. Commercial Pet Food</h1>
+                </div>
+            </div>
+          </header> 
+        <div class="container container-flex">
+            <main role="main">
+                <article class="article-featured">
+                    <img src="assets/food3.jpeg" class="article-image">
+                    <h4 class="article-title">Introduction</h4>
+                    <p class="article-body">Choosing the right food for your pet can be overwhelming. Should you go for commercial pet food, or is homemade food a better option? Let’s break down the pros and cons of each.
+                      <br><strong>Commercial Pet Food</strong><br>
+                      🐾 Pros:<br>
+                        ✔ Convenient and requires no preparation.<br>
+                        ✔ Scientifically formulated for balanced nutrition.<br>
+                        ✔ Available in various options (dry, wet, raw).<br>
+
+                        🐾 Cons:<br>
+                        ❌ May contain artificial preservatives and fillers.<br>
+                        ❌ Some brands use low-quality ingredients.<br>
+                        ❌ Can be expensive in the long run.<br>
+                      <strong> Homemade Pet Food</strong><br>
+                      🐾 Pros:<br>
+                        ✔ Full control over ingredients and quality.<br>
+                        ✔ No artificial preservatives or additives.<br>
+                        ✔ Can be customized for pets with allergies or sensitivities.<br>
+
+                        🐾 Cons:<br>
+                        ❌ Requires time and effort to prepare.<br>
+                        ❌ Risk of unbalanced nutrition if not planned properly.<br>
+                        ❌ Shorter shelf life than commercial food.<br>
+                    </p>
+                </article>
+        </div>
+        <footer>
+            <p><strong>Living the Simple Life</strong></p>
+            <p>Copyright 2019</p>
+        </footer>
+    </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            let sidebar = document.getElementById('sidebar');
+            let content = document.getElementById('content');
+            sidebar.classList.toggle('active');
+            content.classList.toggle('shifted');
+        }
+        
+        function showBlog(index) {
+            let blogs = document.querySelectorAll('.blog');
+            blogs.forEach(blog => blog.classList.add('hidden'));
+            document.getElementById('blog' + index).classList.remove('hidden');
+        }
+        
+        function searchBlog() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let blogs = document.querySelectorAll('.blog');
+            let found = false;
+            
+            blogs.forEach((blog, index) => {
+                let title = blog.querySelector('h2').textContent.toLowerCase();
+                if (title.includes(input) && index !== 0) {
+                    blogs.forEach(b => b.classList.add('hidden'));
+                    blog.classList.remove('hidden');
+                    found = true;
+                }
+            });
+            
+            document.getElementById('no-results').style.display = found ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
